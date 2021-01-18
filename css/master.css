@@ -1,0 +1,73 @@
+/* PRESCRISIONI GENERALI */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+/* MENU NAVIGAZIONE */
+nav {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  margin: 20px 20px 0 0;
+}
+ul.menu {
+  list-style: none;
+}
+.menu li {
+  display: inline-block;
+}
+.menu li a {
+  text-decoration: none;
+  color: black;
+}
+.menu_btn {
+  padding: 10px 14px;
+  background-color: white;
+  border-radius: 50%;
+}
+.menu_btn:hover {
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+}
+
+/* BLOCCHI */
+main {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.block {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.section_cotainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* background-color: rgba(100,100,100,0.2); */
+}
+.text {
+  text-align: center;
+  font-size: 3em;
+}
+#section1 {
+  background-color: red;
+  color: yellow;
+}
+#section2 {
+  background-color: green;
+  color: yellow;
+}
+#section3 {
+  background-color: yellow;
+  color: green;
+}

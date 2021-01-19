@@ -6,6 +6,8 @@
 }
 html {
   scroll-behavior: smooth;
+}
+body {
   font-family: 'Rubik Mono One', sans-serif;
 }
 
@@ -13,7 +15,7 @@ html {
 nav {
   position: fixed;
   right: 0;
-  z-index: 1;
+  z-index: 9999; /* sopra tutto, per sicurezza */
   margin: 20px 20px 0 0;
 }
 ul.menu {
@@ -27,28 +29,35 @@ ul.menu {
   padding: 10px 14px;
   background-color: white;
   border-radius: 50%;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
   text-decoration: none;
   color: black;
 }
 .menu li a:hover {
   box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
 }
+.menu li a:active {
+  background-color: lightgrey;
+}
 
 /* BLOCCHI */
-main {
+/* nav position fixed è già rimossa dal flusso!!
+non è necessario rimuovere e posizionare anche main */
+/* main {
   position: absolute;
   z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
-}
+} */
 .block {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
+  /* non 100vw, altrimenti appare scrollbar orizzontale (causata da scrollbar verticale) */
   height: 100vh;
 }
 .section_cotainer {
-  position: absolute;
+  position: absolute; /* rispetto al padre .block */
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
